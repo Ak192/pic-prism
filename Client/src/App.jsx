@@ -9,12 +9,11 @@ import Header from "./component/Header"
 
 export default function App() {
   return (
-    <div>
-    
+    <div className="bg-[aliceblue]"  >    
       <Router>
        <Header/>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signin />} />
