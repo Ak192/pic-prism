@@ -10,7 +10,7 @@ const Card = () => {
             <FcLikePlaceholder />
             </div>
                 <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                    src="https://images.pexels.com/photos/27001883/pexels-photo-27001883/free-photo-of-a-white-car-is-driving-down-a-city-street.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
                     alt="car!" />
             </figure>
 

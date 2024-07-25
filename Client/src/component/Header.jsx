@@ -23,18 +23,18 @@ const Header = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
               <Link to='/home'>Home</Link>
-              <Link to='/profile/saler'>Saler</Link>
-              <Link to='/profile/buyer'>Buyer</Link>
+              <Link to='/Aboutus'>Aboutus</Link>
+              <Link to='/Contactus'>Cotactus</Link>
             </ul>
           </div>
           <a > </a>
           <Link to='/' className="btn btn-ghost  text-2xl font-bold">Pic-Cart</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <Link to='/home' className='mx-2'>Home</Link>
-            <Link to='/profile/saler' className='mx-2'>Saler</Link>
-            <Link to='/profile/buyer' className='mx-2'>Buyer</Link>
+          <ul className="menu menu-horizontal px-1 gap-2 font-bold font-mono ">
+          <li>  <Link to='/home' className='mx-2'>Home</Link> </li>
+           <li> <Link to='/Aboutus'>Aboutus</Link></li>
+           <li> <Link to='/Contactus'>Cotactus</Link></li>
           </ul>
         </div>
         <div className="navbar-end">
