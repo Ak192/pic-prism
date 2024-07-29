@@ -1,14 +1,21 @@
+
 const express = require('express')
 const app = express();
 app.use(express.json());
-app.get('/product',async(req,res)=>{
-    try{
-        res.status(201).send({message:'show all product'})
-    }
-    catch(err){
-     res.status(404).send(err);
-    }
-} );
-app.listen('5000',()=>{
-  console.log("server start port :50000")
+require('dotenv').config();
+const {readdirSync}=require('fs')
+
+const {connectDB}= require('./dbconfig');
+const { route } = require('./Routers/AuthRoutes');
+
+
+connectDB();
+const port=process.env.PORT;
+//dynamic routers for routing all the routers
+readdirSync('./Routers').map((route)=>
+  app.use('/api',require(`./Routers/${route}`))
+);
+// console.log(readdirSync('./Routers'));
+app.listen(port,()=>{
+  console.log(`server start port :${port}`);
 });
