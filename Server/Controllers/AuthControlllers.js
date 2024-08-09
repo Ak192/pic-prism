@@ -9,6 +9,13 @@ const { generaterefreshToken } = require('../helpers/RefreshToken');
 const signup = async (req, res) => {
     const { username, email, password, accountType } = req.body;
     try {
+        if(!username && !email && !password){
+            return  res.status(404).json({message:"All field mendatory !"});
+        }
+        if(username=="" && email=="" && password==""){
+            return res.status(404).json({message:"All field Mendetory !"});
+        }
+
         let user = await User.findOne({ username });
         if (user) {
             return res.status(404).json({ success: false, message: 'Already Exist user please Try again' })

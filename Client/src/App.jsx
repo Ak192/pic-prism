@@ -21,9 +21,11 @@ export default function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/contactus" element={<Contactus/>}/>
+          <Route path="/signup" element={<Signin/>}/>
+          <Route path="/login" element={<Login/>}/>
           <Route path="/profile">
             <Route path="/profile/Buyer" element={<Buyer />} />
-            <Route path="/profile/Saler" element={<Saler />} />
+            <Route path="/profile/Saller" element={<Saler />} />
           </Route>
         </Routes>
       </Router>
