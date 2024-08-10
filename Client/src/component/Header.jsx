@@ -1,16 +1,15 @@
 
-
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 
 
 const Header = () => {
+const {pathname}=useLocation();
 
- 
 
   return (
-    <div className="navbar sticky top-0 z-10 bg-white border-b bg-opacity-30 border-gray-200 backdrop-filter backdrop-blur-lg">
+    <div className={`navbar sticky top-0 z-10 bg-white border-b bg-opacity-30 border-gray-200 backdrop-filter backdrop-blur-lg ${pathname==="/profile/Buyer"|| pathname==="/profile/Saller"?"hidden":"fixed"}`}>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

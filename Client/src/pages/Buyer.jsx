@@ -1,8 +1,15 @@
+import DeshboardSidebar from "../component/DeshboardSidebar"
 
 
 const Buyer = () => {
   return (
-    <div>Buyer</div>
+    <div>
+      <DeshboardSidebar />
+     <div>
+      {/* we will  change the page through switch case here */}
+     
+     </div>
+    </div>
   )
 }
 

@@ -28,9 +28,10 @@ export default function App() {
             <Route path="/profile/Saller" element={<Saler />} />
           </Route>
         </Routes>
+        <Footer/>
       </Router>
     </div>
-    <Footer/>
+
     </>
   )
 }
