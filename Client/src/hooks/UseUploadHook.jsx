@@ -14,7 +14,7 @@ const useupload=async({image,onUploadProgress})=>{
             withCreadentials:false,
         }
       }
-        const res  = await axios.post(`https://api.cloudinary.com/v1_1/${import.meta.env.vIT_CLOUDINARY_CLOUD_NAME}/image/upload`);
+        const res  = await axios.post(`https://api.cloudinary.com/v1_1/${import.meta.env.VIT_CLOUDINARY_CLOUD_NAME}/image/upload`);
         const data = await res.data;
         if(!data) return toast.error("upload field !");
         return data ;
