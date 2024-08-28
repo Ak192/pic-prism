@@ -17,7 +17,7 @@ const Signin = () => {
 
     const data = { username, email, password, accountType };
     
-    
+    console.log(data);
     try {
 
       const res = await axios.post(import.meta.env.VITE_API_URL+"/signup", data);
@@ -90,8 +90,8 @@ const Signin = () => {
                 <input type="password"  placeholder='********' value={password} onChange={(e) => setPass(e.target.value)} />
               </label>
               <select onChange={(e) => setAccountType(e.target.value)} className="select select-bordered select-sm w-full gap-2 mb-2">
-               
-                <option value='Buyer' selected >Buyer</option>
+               <option value=""disabled selected >Account Type</option>
+                <option value='Buyer'>Buyer</option>
                 <option value='Saller' >Saller</option>
 
               </select>

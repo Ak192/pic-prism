@@ -4,7 +4,7 @@ import Card from '../component/Card'
 
 const Home = () => {
   return (
-    <div>
+    <div >
       <Hero />
       <div className='flex flex-wrap justify-center mt-4' >
         <Card />

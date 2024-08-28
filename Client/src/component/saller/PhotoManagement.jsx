@@ -14,7 +14,7 @@ const PhotoManagement = () => {
         }
     }
     return (
-        <div className='flex flex-col sm:flex-row'>
+        <div className=''>
             {/* Deshboardheader will be here */}
             <DeshboardHeader />
             {/* Image add component will be  here */}

@@ -1,57 +1,48 @@
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-
-
+import {RiMenu3Fill} from 'react-icons/ri'
+import { IoClose } from 'react-icons/io5';
 
 const Header = () => {
-const {pathname}=useLocation();
-
-
+  const { pathname } = useLocation();
+  const [toggle,setToggle]=useState(false);
+ const  togglehandler=()=>{
+    console.log({toggle});
+  }
+  useEffect(()=>{
+   return (togglehandler())
+  },[toggle])
   return (
-    <div className={`navbar sticky top-0 z-10 bg-white border-b bg-opacity-30 border-gray-200 backdrop-filter backdrop-blur-lg ${pathname==="/profile/Buyer"|| pathname==="/profile/Saller"?"hidden":"fixed"}`}>
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16" />
-            </svg>
-          </div>
-          <ul tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <Link to='/home'>Home</Link>
-            <Link to='/Aboutus'>Aboutus</Link>
-            <Link to='/Contactus'>Cotactus</Link>
+    <>
+      <div className={`navbar sticky top-0 z-10 lg:justify-between   max-sm:flex-wrap  bg-white border-b bg-opacity-30 border-gray-200 backdrop-filter  backdrop-blur-lg ${pathname === "/profile/Buyer" || pathname === "/profile/Saller" ? "hidden" : "fixed"}`}>
+
+        <Link to='/' className="btn btn-ghost  text-2xl font-bold">Pic-Cart</Link>
+        <div className=" lg:flex hidden   ">
+          <ul className="menu menu-horizontal px-1 gap-2 font-bold font-mono ">
+            <li>  <Link to='/home' className='mx-2'>Home</Link> </li>
+            <li> <Link to='/Aboutus'>Aboutus</Link></li>
+            <li> <Link to='/Contactus'>Cotactus</Link></li>
           </ul>
         </div>
-        <a > </a>
-        <Link to='/' className="btn btn-ghost  text-2xl font-bold">Pic-Cart</Link>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-2 font-bold font-mono ">
-          <li>  <Link to='/home' className='mx-2'>Home</Link> </li>
-          <li> <Link to='/Aboutus'>Aboutus</Link></li>
-          <li> <Link to='/Contactus'>Cotactus</Link></li>
-        </ul>
-      </div>
-      <div className="navbar-end">
+        <div className=" max-sm:ms-8">
+          {/* You can open the modal using document.getElementById('ID').showModal() method */}
+          <Link to='/signup'><button className="btn btn-sm btn-primary me-4" >signup</button></Link>
+          <Link to='/login'><button className="btn btn-sm btn-outline btn-primary  me-4" >login</button></Link>
+          <RiMenu3Fill className={`${toggle== true ? "hidden": "block"} text-2xl  flex block  md:hidden`} onClick={()=>setToggle(true)} />
+          <IoClose className={`${toggle== false ? "flex hidden": "flex block"} text-2xl  block  md:hidden `} onClick={()=>setToggle(false)} />
+        </div>
 
-        {/* You can open the modal using document.getElementById('ID').showModal() method */}
-        <Link to='/signup'><button className="btn btn-sm btn-primary me-4" >signup</button></Link>
-        <Link to='/login'><button className="btn btn-sm btn-outline btn-primary  me-4" >login</button></Link>
-
+        <div className={`  ${toggle== true ?"block lg:hidden m-auto":"hidden" } `}>
+          <ul className="menu menu-horizontal px-1 gap-2 font-bold font-mono ">
+            <li>  <Link to='/home' className='mx-2'>Home</Link> </li>
+            <li> <Link to='/Aboutus'>Aboutus</Link></li>
+            <li> <Link to='/Contactus'>Cotactus</Link></li>
+          </ul>
+        </div>
       </div>
-  
-    </div>
+
+    </>
   )
 }
 

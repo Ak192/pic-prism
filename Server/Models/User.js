@@ -17,7 +17,8 @@ const userSchema= new mongoose.Schema({
     },
     accountType:{
         type:String,
-        default:"Buyer"
+        required:true
+     
     },
     uploads:[{       
          type:mongoose.Schema.Types.ObjectId,

@@ -13,7 +13,7 @@ import Footer from "./component/Footer"
 export default function App() {
   return (
     <>
-    <div className="bg-[aliceblue]"  >    
+    <div  >    
       <Router>
        <Header/>
         <Routes>
@@ -28,7 +28,7 @@ export default function App() {
             <Route path="/profile/Saller" element={<Saler />} />
           </Route>
         </Routes>
-        <Footer/>
+        <Footer />
       </Router>
     </div>
 

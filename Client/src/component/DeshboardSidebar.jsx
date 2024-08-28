@@ -15,10 +15,10 @@ const DeshboardSidebar = () => {
 
     const author = useSelector((state) => state.auth.author);
    const tab= useSelector((state)=>state.nav.tab);
-   const sidebar =useSelector((state)=>state.nav.sidebar);
+   const sidebar =useSelector((state)=>state.nav.Sidebar);
   
     return (
-        <nav className={`flex text-lg ${!sidebar==true ? "-translate-x-[500px] sm:translate-x-0":"translate-x-0"} font-semibold bg-white flex-col gap-2 w-fit min-h-screen border-top-2 p-3 list-none justify-between items-center`}>
+        <nav className={` fixed z-10 flex text-lg ${!sidebar==true ? "-translate-x-[500px] sm:translate-x-0":"translate-x-0"} ease-in-out duration-300 flex sm:static font-semibold bg-white flex-col gap-2 w-fit min-h-screen border-top-2 p-3 list-none justify-between items-center`}>
 
             <div>
                 {/* circle with my name first latter */}
