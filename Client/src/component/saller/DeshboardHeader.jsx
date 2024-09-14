@@ -15,10 +15,11 @@ const DeshboardHeader = () => {
     <div className='my-5 mx-8'>
      <h1 className='text-3xl font-bold'>Hello {author.charAt(0).toUpperCase()+author.slice(1)},</h1>
      <p>Wellcome to your {role} deshboard</p>
-    </div>
-     {/* Humburger icon just for phone  */}
+      {/* Humburger icon just for phone  */}
     <RiMenu3Fill onClick={()=>dispatch(togglesidebar())} className={`${sidebar === true ? "hidden":"block sm:hidden"} text-3xl absolute top-5 right-5`} />
     <IoClose  onClick={()=>dispatch(togglesidebar())} className={`${sidebar === true ? "block sm:hidden":"hidden"} text-3xl absolute top-5 right-5 `}  />
+    </div>
+    
     </>
   )
 }

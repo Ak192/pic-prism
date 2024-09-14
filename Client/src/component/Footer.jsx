@@ -7,13 +7,14 @@ const Footer = () => {
  console.log(pathname);
 
   return (
-    <footer className={`  footer footer-center bg-base-200 text-base-content rounded p-10  ${pathname==="/profile/Buyer"|| pathname==="/profile/Saller"?"hidden":"fixed"}`}>
-      <nav className="grid grid-flow-col gap-4">
+    <footer className={` absolute bottom-0 footer footer-center bg-base-200 text-base-content rounded p-10  ${pathname==="/profile/Buyer"|| pathname==="/profile/Saller"?"hidden":"fixed"}`}>
+      <nav className=" flex justify-between">
+        <div className='flex flex-col sm:flex-row gap'>
         <Link to='/'>Home</Link>
         <Link to='/about'>About</Link>
-      </nav>
-      <nav>
-        <div className="grid grid-flow-col gap-4">
+        <Link to='/about'>Contact Us</Link>
+        </div>
+        <div className="grid grid-flow-col gap-2">
           <a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -49,6 +50,7 @@ const Footer = () => {
           </a>
         </div>
       </nav>
+     
       <aside>
         <p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
       </aside>

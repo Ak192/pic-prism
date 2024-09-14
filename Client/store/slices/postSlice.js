@@ -8,10 +8,10 @@ const postSlice=createSlice({
     },
     reducers:{
         setAllPosts:(state,action)=>{
-            state.allPost=action.payload;
+            state.allPosts=action.payload;
         },
         setMyPosts:(state,action)=>{
-            state.myPost=action.payload;
+            state.myPosts=action.payload;
         },
     }
 

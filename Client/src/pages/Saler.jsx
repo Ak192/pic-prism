@@ -4,7 +4,7 @@ import PhotoManagement from '../component/saller/PhotoManagement'
 
 const Saler = () => {
   return (
-    <div className='flex flex-col sm:flex-row'> 
+    <div className='flex flex-col sm:flex-row bg-gradient-to-r from-cyan-300 to-blue-300'> 
     
     <DeshboardSidebar/>
      <div>

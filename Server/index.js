@@ -10,7 +10,8 @@ require('dotenv').config();
 const {readdirSync}=require('fs')
 
 const {connectDB}= require('./dbconfig');
-const { route } = require('./Routers/AuthRoutes');
+// const { route } = require('./Routers/AuthRoutes');
+
 
 
 connectDB();
